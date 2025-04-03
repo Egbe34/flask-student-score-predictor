@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Score Predictor</title>
+</head>
+<body>
+    <h2>Enter Study Hours</h2>
+    <form action="/predict" method="POST">
+        <input type="text" name="hours" placeholder="Enter number of hours" required>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
